@@ -1,8 +1,10 @@
 package com.github.therycn.tyleaguedatarest;
 
 import com.github.therycn.tyleaguedatarest.entity.League;
+import com.github.therycn.tyleaguedatarest.entity.Match;
 import com.github.therycn.tyleaguedatarest.event.LogEvent;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.rest.core.annotation.HandleBeforeCreate;
 import org.springframework.data.rest.core.annotation.HandleBeforeSave;
@@ -15,6 +17,7 @@ import java.util.Date;
  */
 @RepositoryEventHandler
 @RequiredArgsConstructor
+@Slf4j
 public class LeagueEventHandler {
 
     private final ApplicationEventPublisher applicationEventPublisher;
@@ -29,4 +32,8 @@ public class LeagueEventHandler {
         applicationEventPublisher.publishEvent(new LogEvent("Unhandled event for league " + league.getName(), new Date()));
     }
 
+    @HandleBeforeCreate
+    public void handleBeforeCreateMatch(Match match) {
+        log.info("Before adding a match!");
+    }
 }

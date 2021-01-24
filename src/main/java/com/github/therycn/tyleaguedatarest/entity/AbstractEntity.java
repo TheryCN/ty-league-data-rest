@@ -1,5 +1,6 @@
 package com.github.therycn.tyleaguedatarest.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.domain.AbstractAggregateRoot;
@@ -17,10 +18,11 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 @Getter
 @Setter
+@EqualsAndHashCode(of = "id", callSuper = false)
 public class AbstractEntity<ID> extends AbstractAggregateRoot<AbstractEntity<ID>> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private ID id;
+    protected ID id;
 
 }
