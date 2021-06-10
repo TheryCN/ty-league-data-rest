@@ -4,9 +4,20 @@ Test for Spring Data + Rest Repositories.
 
 The example shows how to add business layer to rest repositories within the same transaction.
 
+HAL Explorer is available at `http://localhost:8080`.
+
 Next steps :
-* Add more entities
+* Composite ids
 * Use projections (such as dto)
+* Custom queries
+
+0. Concepts
+
+- Spring Data
+- Spring Data Rest
+- HAL (Hypertext Application Language)
+- Spring Events (`ApplicationEventPublisher`/`EventListener`)
+- DDD (Domain Driven Development) with Spring Data (`AggregateRoot`)
 
 1. Spring Data REST
 
@@ -47,3 +58,6 @@ References :
 * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#core.domain-events
 * https://docs.spring.io/spring-data/rest/docs/current/reference/html/#reference
 * https://stackoverflow.com/questions/52241626/does-spring-data-rest-event-hanlders-use-separate-database-transactions
+* Spring Data & DDD : https://www.baeldung.com/spring-data-ddd
+* https://www.baeldung.com/spring-rest-hal
+* Id converter example: https://www.programmersought.com/article/63616433449/
