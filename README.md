@@ -21,7 +21,11 @@ Next steps :
 
 1. Spring Data REST
 
-1.1. How to deal with foreign key :
+1.1. Projection
+
+See `om.github.therycn.tyleaguedatarest.entity.projection.TeamAndLeagueProjection` and then query `http://localhost:8080/teams/1?projection=teamAndLeague`
+
+1.2. How to deal with foreign key :
 
 ```
 POST /match
