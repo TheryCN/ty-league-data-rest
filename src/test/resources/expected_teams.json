@@ -1,0 +1,39 @@
+{
+  "_embedded" : {
+    "teams" : [ {
+      "name" : "Grenoble",
+      "country" : "France",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost/teams/1"
+        },
+        "team" : {
+          "href" : "http://localhost/teams/1"
+        },
+        "matchASet" : {
+          "href" : "http://localhost/teams/1/matchASet"
+        },
+        "matchBSet" : {
+          "href" : "http://localhost/teams/1/matchBSet"
+        },
+        "league" : {
+          "href" : "http://localhost/teams/1/league"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost/teams"
+    },
+    "profile" : {
+      "href" : "http://localhost/profile/teams"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
