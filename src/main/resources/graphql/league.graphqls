@@ -16,3 +16,13 @@ type Team {
 type Query {
     leagues: [League]!
 }
+
+input LeagueAdd {
+    name: String!
+    season: Int!
+    segment: String
+}
+
+type Mutation {
+    createLeague(leagueAdd: LeagueAdd!): League!
+}

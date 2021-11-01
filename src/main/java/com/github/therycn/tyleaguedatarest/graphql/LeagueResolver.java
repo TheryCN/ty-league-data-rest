@@ -1,5 +1,6 @@
 package com.github.therycn.tyleaguedatarest.graphql;
 
+import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import com.github.therycn.tyleaguedatarest.entity.League;
 import com.github.therycn.tyleaguedatarest.entity.Team;
