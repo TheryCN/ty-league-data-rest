@@ -37,7 +37,18 @@ mutation {
 ```
 
 # Subscription
-# Pros / Cons
+# Pros
+
+- Easy to learn
+- Network performance improvements (return only requested fields)
+- Less code (type checks, dto)
+- Decoupling API / Backend
+
+# Cons
+
+- Not supported by Azure API Management
+- Http caching (i.e. GET queries)
+- More processing server side to parse the request (POST)
 
 # References
 - https://www.baeldung.com/spring-graphql
