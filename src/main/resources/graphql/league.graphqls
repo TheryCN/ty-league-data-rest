@@ -1,0 +1,18 @@
+type League {
+    id: ID!
+    name: String!
+    season: Int!
+    segment: String,
+    teams: [Team]!
+}
+
+type Team {
+    id: ID!
+    name: String!
+    country: String!
+    league: League
+}
+
+type Query {
+    leagues: [League]!
+}
