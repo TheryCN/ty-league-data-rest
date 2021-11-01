@@ -4,7 +4,6 @@ Graphql is a database query language.
 
 # Concepts
 - Query
-- Resolver
 - Mutation
 - Subscription
 
@@ -13,7 +12,7 @@ Graphql is a database query language.
 - Add graphql schema definition `src/main/resources/graphql`
 - Add at least the root query resolver `com.github.therycn.tyleaguedatarest.graphql`
 
-# Resolver
+# Query
 
 ```
 query {
@@ -49,6 +48,7 @@ mutation {
 - Not supported by Azure API Management
 - Http caching (i.e. GET queries)
 - More processing server side to parse the request (POST)
+- File upload
 
 # References
 - https://www.baeldung.com/spring-graphql
