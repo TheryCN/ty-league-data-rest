@@ -74,4 +74,5 @@ mutation {
 
 # References
 - https://www.baeldung.com/spring-graphql
-- GraphQL Exception handling : https://medium.com/swlh/understanding-graphql-error-handling-mechanisms-in-spring-boot-604301c9bedb
+- https://graphql.org/
+- https://graphql.org/code/#java-kotlin
