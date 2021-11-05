@@ -22,6 +22,26 @@ query {
     season
   }
 }
+
+query {
+  leagueById(id:2) {
+    id, 
+    name, 
+    season
+  }
+}
+
+query {
+  leagues {
+    id,
+    name,
+    season,
+    teams {
+      id,
+      name
+    }
+  }
+}
 ```
 
 # Mutations
@@ -40,15 +60,17 @@ mutation {
 
 - Easy to learn
 - Network performance improvements (return only requested fields)
-- Less code (type checks, dto)
+- Less code (API Abstraction)
 - Decoupling API / Backend
+- GraphQL Server with AWS AppSync https://aws.amazon.com/fr/appsync/
 
 # Cons
 
-- Not supported by Azure API Management
-- Http caching (i.e. GET queries)
 - More processing server side to parse the request (POST)
-- File upload
+- Http caching (i.e. GET queries)
+- File upload handling (supported by some libs)
+- N+1 queries performances (complex queries)
+
 
 # References
 - https://www.baeldung.com/spring-graphql
